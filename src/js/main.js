@@ -106,7 +106,7 @@
               });
             } else if (formCount == 2) {
               $("#input-3").focus().delay(400).queue(function() {
-                showText("#input-3", "S.Allott@pebblecode.com", 0, 20);  
+                showText("#input-3", "stephen@pebblecode.com", 0, 20);  
               });
             } else if (formCount == 3) {
               $("#input-4").focus().delay(300).queue(function() {
