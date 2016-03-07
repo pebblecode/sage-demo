@@ -2,15 +2,22 @@
 <html>
 <head>
   @@include('./inc/head.html')
-  <title></title> <!-- ADD A TITLE! -->
+  <title>Sage demo</title> <!-- ADD A TITLE! -->
 </head>
 <body>
 
-  @@include('./home.html')
-  @@include('./form.html')
-  @@include('./product.html')
+	<div class="loader"></div>
 
-  <!--<script src="js/vendor/jquery-2.1.1.min.js"></script>-->
+	<div id="all-wrap" class="all-wrap">
+
+	  @@include('./home.html')
+	  @@include('./form.html')
+	  @@include('./product.html')
+	  @@include('./end.html')
+
+	</div>
+
+  <script src="js/vendor/jquery-2.1.1.min.js"></script>
   <script src="js/vendor/classie.js"></script>
   <script src="js/main.js"></script>
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-phone copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-6-Copy-10" transform="translate(-36.000000, -331.000000)">
+            <g id="icon-phone-copy" transform="translate(36.000000, 331.000000)">
+                <circle id="Oval-1" fill="#2E3456" cx="27" cy="27" r="27"></circle>
+                <path d="M25.5,17.125 L25.5,30.875 L29.625,26.75 L37.875,26.75 L37.875,17.125 L25.5,17.125 L25.5,17.125 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M31.59125,33.52875 C31.11,33.3775 30.57375,33.4875 30.18875,33.85875 L27.16375,36.88375 C23.2725,34.90375 20.0825,31.7275 18.1025,27.83625 L21.1275,24.7975 C21.5125,24.42625 21.6225,23.89 21.47125,23.40875 C20.9625,21.86875 20.6875,20.21875 20.6875,18.5 C20.6875,17.74375 20.06875,17.125 19.3125,17.125 L14.5,17.125 C13.74375,17.125 13.125,17.74375 13.125,18.5 C13.125,31.41125 23.58875,41.875 36.5,41.875 C37.25625,41.875 37.875,41.25625 37.875,40.5 L37.875,35.6875 C37.875,34.93125 37.25625,34.3125 36.5,34.3125 C34.78125,34.3125 33.13125,34.0375 31.59125,33.52875 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

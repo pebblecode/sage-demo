@@ -115,7 +115,7 @@
 
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
-.input--filled .input__label--hoshi::after {
+.input--filled .input__label--hoshi::after, {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }

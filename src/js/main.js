@@ -1,11 +1,21 @@
 (function () { 'use strict';
 
-  var readyStateCheckInterval = setInterval(function() {
-      if (document.readyState === "complete") {
-          clearInterval(readyStateCheckInterval);
-          init();
-      }
-  }, 10);
+  $(window).load(function() {
+      // When the page has loaded
+      // $("body").fadeIn(1500);
+      
+      $("#all-wrap").css('display', 'block');
+      
+      $('#intro-1').addClass('left-in-1');
+      $('#intro-2').addClass('left-in-2');
+      $('#intro-3').addClass('left-in-3');
+      $('#intro-4').addClass('left-in-4');
+      $('#intro-5').addClass('left-in-5');
+      $('#btn-1').addClass('left-in-6');
+      $("#all-wrap").css('opacity', '1');
+
+      init();
+    });
 
 
   function init() {
@@ -44,31 +54,74 @@
       // END CLASSIE//
 
 
+      $('[id^=btn-]').click( function(event) {
+        var btnNum = event.target.id
+        var wrapNum = event.target.id.replace('btn', 'wrap');
+        // document.getElementById(wrapNum).style.display="none";
+        if ( wrapNum == 'wrap-4') {
+            location.reload();
+        } else {
+            //if doesn't have off class
+            if ( $('#'+ btnNum).hasClass('btn-off') == false ) {
+              console.log( $('#' + wrapNum ).hasClass('btn-off') );
+                $('#'+wrapNum).animate({
+                    left: '300%',
+                    top: '-20%',
+                    height: '+=50%',
+                    width: '+=50%',
+                    opacity: 0
+                }, 500);
+            }
+        }
+        
+      })
 
-      document.getElementById('btn-1').onclick = function(event) {
-        document.getElementById('wrap-1').style.display="none";
-      }
+      
+
+      //Click form to autofil text
+      var formCount = 0;
 
 
-      document.getElementById('btn-2').onclick = function(event) {
-        document.getElementById('wrap-2').style.display="none";
-      }
-
-
-      document.getElementById('btn-3').onclick = function(event) {
-        document.getElementById('wrap-3').style.display="none";
-      }
-
-
+      $('#form-wrap').click( function() {
+        if (formCount == 0) {
+          $("#input-1").focus().delay(1000).queue(function() {
+            showText("#input-1", "Stephen", 0, 150);  
+          });
+          
+        }
+      });
 
 
 
 
-      // document.querySelectorAll('[id^=btn-]').onclick = function(event) {
-      //   var wrapNum = event.target.id.replace('btn', 'wrap');
-      //   console.log('clicked');
-      //   document.getElementById(wrapNum).style.display="none";
-      // }
+      var showText = function (target, message, index, interval) {    
+        if (index < message.length) { 
+          $(target).val(function(_, v) { return v + message[index++]; })
+          setTimeout(function () { showText(target, message, index, interval); }, interval); 
+        } else {
+            formCount++;
+            if (formCount == 1) {
+              $("#input-2").focus().delay(1000).queue(function() {
+                showText("#input-2", "Allott", 0, 40);  
+              });
+            } else if (formCount == 2) {
+              $("#input-3").focus().delay(400).queue(function() {
+                showText("#input-3", "S.Allott@pebblecode.com", 0, 20);  
+              });
+            } else if (formCount == 3) {
+              $("#input-4").focus().delay(300).queue(function() {
+                showText("#input-4", "07772 227 772", 0, 20);
+                
+              });
+            } else if (formCount == 4) {
+              $("#btn-2").focus()
+              $("html, body").animate({ scrollTop: 0 }, 200);
+              $('#btn-2').toggleClass('btn-off');  
+            }
+          }
+
+      };
+          
 
   }
 
